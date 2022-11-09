@@ -37,6 +37,30 @@ function resetSelected() {
   });
 }
 
+// Reset gameplay variables
+function resetGameplayVariables() {
+  playerChoice = '';
+  computerChoice = '';
+  playerScoreNumber = 0;
+  computerScoreNumber = 0;
+}
+
+// Resets the gameplay related UI
+function resetGameplayUI() {
+  resultText.textContent = '';
+  computerScoreEl.textContent = computerScoreNumber;
+  computerChoiceEl.textContent = '';
+  playerScoreEl.textContent = playerScoreNumber;
+  playerChoiceEl.textContent = '';
+}
+
+// Reset everything complay related
+function resetAll() {
+  resetSelected();
+  resetGameplayVariables();
+  resetGameplayUI();
+}
+
 // Random computer choice
 function computerRandomChoice() {
   const computerChoiceNumber = Math.random();
